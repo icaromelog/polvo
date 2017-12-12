@@ -1,0 +1,24 @@
+Olá! =)
+
+Primeiramente gostaria de agradecer pela oportunidade de participar do processo seletivo, em seguida segue as ferramentes utilizadas 
+para o desenvolvimento do teste.
+
+Framework Utilizado foi o foundation, com o tema base para o wordpress (FoundationPress)
+https://github.com/olefredrik/FoundationPress
+
+Syntax SCSS(SASS) para pre-processamneto de CSS
+Utilizei gulp como taskrunner (https://gulpjs.com/)
+
+O arquivo do banco de dados está na pasta raiz do projeto (testeicaro.sql),
+
+A versão do tema compilado, está dentro da raiz do tema (wp-content/themes/ljardineira/packaged).
+
+Os acessos ao wp-admin são:
+admin
+admin12345
+
+Espero que esteja tudo ok!
+
+
+
+
