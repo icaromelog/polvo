@@ -1,0 +1,141 @@
+// Posts
+.post {
+  @include flex-grid-row;
+
+  &-wrap {
+    @include flex-grid-column(12);
+
+    @include breakpoint(mobile down) {
+      padding: 0;
+    }
+
+    @include breakpoint(mobile) {
+      @include flex-grid-column(6);
+      padding-left: 25px!important;
+    }
+
+    &-sidebar {
+      @include flex-grid-column(12);
+
+      @include breakpoint(mobile) {
+        @include flex-grid-column(10);
+      }
+      padding-left: 0!important;
+    }
+  }
+
+  &-block {
+    margin-bottom: 40px;
+    min-height: 200px;
+    position: relative;
+
+    &-sidebar {
+      min-height: auto;
+    }
+  }
+
+  &-thumb {
+    @include flex-grid-column(12);
+    height: 200px;
+    margin-bottom: 20px;
+    background-size: cover;
+    background-position: center center;
+
+    @include breakpoint(mobile) {
+      @include flex-grid-column(6);
+      border-radius: 2px;
+      height: auto;
+      margin: 0;
+    }
+
+    &-sidebar {
+      height: 120px;
+      margin-bottom: 0;
+      @include flex-grid-column(12);
+
+      @include breakpoint(mobile) {
+        @include flex-grid-column(9);
+      }
+    }
+  }
+
+  &-title {
+    font-family: $font-text;
+    font-size: rem-calc(19);
+    font-weight: 600;
+    color: $gray;
+    transition: color .08s linear;
+
+    &-sidebar {
+      font-size: rem-calc(16);
+      margin-top: 7px;
+      display: block;
+    }
+
+    &:hover {
+      color: $purple-default;
+    }
+  }
+
+  &-content {
+    font-family: $font-text;
+    color: $gray;
+    font-size: rem-calc(13);
+
+    p {
+      line-height: 1.8;
+    }
+  }
+
+  &-link {
+    position: absolute;
+    bottom: 0;
+    color: $purple-default;
+    font-size: rem-calc(13);
+    font-weight: 600;
+    font-family: $font-text;
+    border-bottom: 1px solid $purple-default;
+    transition: all .1s linear;
+
+    &:hover {
+      color: $gray;
+      border-color: $gray;
+    }
+  }
+}
+
+// Paginacão
+.wp-pagenavi {
+  background-color: #efefef;
+  font-family: $font-text;
+  font-weight: 600;
+  padding: 15px 20px;
+  text-align: center;
+
+  a {
+    color: $gray;
+    padding: 5px 12px;
+    transition: color .08s linear;
+
+    &:hover {
+      color: $purple-default;
+    }
+  }
+
+  .current {
+    padding: 5px 12px;
+    background-color: $purple-default;
+    border-radius: 3px;
+    color: $white;
+  }
+
+  .nextpostslink {
+    float: right;
+    padding: 0;
+  }
+
+  .previouspostslink {
+    float: left;
+    padding: 0;
+  }
+}

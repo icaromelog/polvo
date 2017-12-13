@@ -1,0 +1,41 @@
+// Page header
+.front-hero {
+  background-image: url('../images/banner-senhora.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 400px;
+}
+
+.intro {
+  @include flex-grid-row;
+  padding: 2em 0;
+  height: 100%;
+
+  &-title {
+    max-width: 400px;
+    font-family: $font-title;
+    font-weight: 400;
+    font-size: rem-calc(28);
+    line-height: 1.2;
+    color: $gray-light;
+
+    @include breakpoint(mobile) {
+      font-size: rem-calc(48);
+    }
+
+    span {
+      font-style: italic;
+      font-weight: 600;
+      color: $purple-default;
+    }
+  }
+
+  &-legend {
+    padding-top: 10px;
+    text-align: right;
+    font-size: rem-calc(17);
+    color: $purple-default;
+  }
+}

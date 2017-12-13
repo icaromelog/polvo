@@ -1,0 +1,59 @@
+.main-container {
+  padding: 0;
+}
+
+.main-grid {
+  @include flex-grid-row;
+  margin-top: 1rem;
+}
+
+// Sidebar
+.social {
+  margin: 0 0 40px;
+  list-style: none;
+
+  &-item {
+    margin-right: 5px;
+    display: inline-block;
+
+    a {
+      display: inline-block;
+      width: 31px;
+      height: 31px;
+      border-radius: 100%;
+      background-color: $gray-lighter;
+      text-align: center;
+      transition: background-color .15s ease-in;
+      color: $white;
+      font-size: rem-calc(18);
+      line-height: 1.5;
+
+      i {
+        vertical-align: middle;
+      }
+
+      &:hover {
+        background-color: $gray-light;
+      }
+    }
+  }
+}
+
+.sidebar {
+  &-noticias {
+    @include breakpoint(medium) {
+      margin-top: 0px;
+    }
+  }
+
+  margin-top: 30px;
+
+  @include breakpoint(medium) {
+    margin-top: 30px;
+    padding-left: 40px;
+  }
+
+  &-img {
+    margin: 10px 0;
+  }
+}
